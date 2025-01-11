@@ -125,8 +125,8 @@ defmodule TurnstileTest do
 
     @tag :external
     test "should return an error response" do
-      Application.put_env(:phoenix_turnstile, :secret_key, "2x0000000000000000000000000000000AA")
-      on_exit(fn -> Application.put_env(:phoenix_turnstile, :secret_key, "1x0000000000000000000000000000000AA") end)
+      Application.put_env(:phx_turnstile, :secret_key, "2x0000000000000000000000000000000AA")
+      on_exit(fn -> Application.put_env(:phx_turnstile, :secret_key, "1x0000000000000000000000000000000AA") end)
 
       assert {:error, res} = Turnstile.verify(%{"cf-turnstile-response" => "abc123"}, "127.0.0.1")
       assert res["success"] == false

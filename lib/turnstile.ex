@@ -15,13 +15,13 @@ defmodule Turnstile do
   @doc """
   Returns the configured site key.
   """
-  def site_key, do: Application.get_env(:phoenix_turnstile, :site_key, "1x00000000000000000000AA")
+  def site_key, do: Application.get_env(:phx_turnstile, :site_key, "1x00000000000000000000AA")
 
   @impl true
   @doc """
   Returns the configured secret key.
   """
-  def secret_key, do: Application.get_env(:phoenix_turnstile, :secret_key, "1x0000000000000000000000000000000AA")
+  def secret_key, do: Application.get_env(:phx_turnstile, :secret_key, "1x0000000000000000000000000000000AA")
 
   @doc """
   Renders the Turnstile script tag.

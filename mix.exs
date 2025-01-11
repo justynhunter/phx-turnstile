@@ -1,12 +1,12 @@
-defmodule PhoenixTurnstile.MixProject do
+defmodule PhxTurnstile.MixProject do
   use Mix.Project
 
-  @url "https://github.com/jsonmaur/phoenix-turnstile"
+  @url "https://github.com/justynhunter/phx-turnstile"
 
   def project do
     [
-      app: :phoenix_turnstile,
-      version: "1.1.3",
+      app: :phx_turnstile,
+      version: "1.0.0",
       elixir: "~> 1.13",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -23,7 +23,7 @@ defmodule PhoenixTurnstile.MixProject do
       docs: [
         main: "readme",
         extras: ["README.md"],
-        authors: ["Jason Maurer"]
+        authors: ["Jason Maurer, Justyn Hunter"]
       ]
     ]
   end
